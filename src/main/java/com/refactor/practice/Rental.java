@@ -1,19 +1,27 @@
 package com.refactor.practice;
 
 public class Rental {
-	private Movie _movie;
+	Movie movie;
 
-	private int _dayRented;
+	private int dayRented;
 	public Rental(Movie movie, int dayRented) {
-		_movie = movie;
-		_dayRented = dayRented;
+		this.movie = movie;
+		this.dayRented = dayRented;
 	}
 
 	public Movie getMovie() {
-		return _movie;
+		return movie;
 	}
 
 	public int getDayRented() {
-		return _dayRented;
+		return dayRented;
+	}
+
+	public double getAmount() {
+		return movie.getPrice(getDayRented());
+	}
+
+	public int getFrequentRenterPoints(int dayRented) {
+		return movie.price.getFrequentRenterPoints(dayRented);
 	}
 }

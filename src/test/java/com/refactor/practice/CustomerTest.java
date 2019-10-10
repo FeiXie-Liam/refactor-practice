@@ -1,5 +1,6 @@
 package com.refactor.practice;
 
+import com.refactor.practice.price.Price;
 import org.apache.commons.io.FileUtils;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,25 +13,40 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CustomerTest {
 	private Customer customer;
-	private String baseline;
+	private String textBaseline;
+	private String htmlBaseline;
 
 	@Before
 	public void setUp() throws IOException {
 		customer = new Customer("user1", new Vector());
-		File file = new File("src/test/java/com/refactor/practice/baseline");
-		baseline = FileUtils.readFileToString(file);
+		File textBaselineFile = new File("src/test/java/com/refactor/practice/textBaseline");
+		textBaseline = FileUtils.readFileToString(textBaselineFile);
+		File htmlBaselineFile = new File("src/test/java/com/refactor/practice/htmlBaseline");
+		htmlBaseline = FileUtils.readFileToString(htmlBaselineFile);
 	}
 
 	@Test
 	public void should_get_statement_of_rentals() {
 		//given
-		addRental(customer, "regular movie", Movie.REGULAR, 3);
-		addRental(customer, "new movie", Movie.NEW_RELEASE, 2);
-		addRental(customer, "children movie", Movie.CHILDRENS, 5);
+		addRental(customer, "regular movie", Price.REGULAR, 3);
+		addRental(customer, "new movie", Price.NEW_RELEASE, 2);
+		addRental(customer, "children movie", Price.CHILDRENS, 5);
 		//when
-		String result = customer.statement();
+		String result = customer.textStatement();
 		//then
-		assertThat(result).isEqualTo(baseline);
+		assertThat(result).isEqualTo(textBaseline);
+	}
+
+	@Test
+	public void should_get_html_statement_of_rentals() {
+		//given
+		addRental(customer, "regular movie", Price.REGULAR, 3);
+		addRental(customer, "new movie", Price.NEW_RELEASE, 2);
+		addRental(customer, "children movie", Price.CHILDRENS, 5);
+		//when
+		String result = customer.htmlStatement();
+		//then
+		assertThat(result).isEqualTo(htmlBaseline);
 	}
 
 	private void addRental(Customer customer, String movieTitle, int movieType, int dayRented) {

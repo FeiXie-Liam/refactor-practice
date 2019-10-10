@@ -1,27 +1,31 @@
 package com.refactor.practice;
 
+import com.refactor.practice.price.Price;
+
 public class Movie {
 
-	public static final int REGULAR = 0;
-	public static final int NEW_RELEASE = 1;
-	public static final int CHILDRENS = 2;
-	private String _title;
-	private int _priceCode;
+	private String title;
+	Price price;
 
 	public Movie(String title, int priceCode) {
-		_title = title;
-		_priceCode = priceCode;
+		this.title = title;
+		setPriceCode(priceCode);
 	}
 
 	public String getTitle() {
-		return _title;
+		return title;
 	}
 
 	public int getPriceCode() {
-		return _priceCode;
+		return price.getPriceCode();
 	}
 
-	public void setPriceCode(int _priceCode) {
-		this._priceCode = _priceCode;
+	public void setPriceCode(int priceCode) {
+		this.price = Price.create(priceCode);
 	}
+
+	double getPrice(int dayRented) {
+		return price.getPrice(dayRented);
+	}
+
 }
