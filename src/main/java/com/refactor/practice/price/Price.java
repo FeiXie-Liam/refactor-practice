@@ -1,7 +1,5 @@
 package com.refactor.practice.price;
 
-import com.refactor.practice.Movie;
-
 public abstract class Price {
 
 	public static final int REGULAR = 0;

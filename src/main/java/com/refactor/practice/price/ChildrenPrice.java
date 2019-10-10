@@ -1,7 +1,5 @@
 package com.refactor.practice.price;
 
-import com.refactor.practice.price.Price;
-
 public class ChildrenPrice extends Price {
 	@Override
 	public int getPriceCode() {
