@@ -11,10 +11,8 @@ public abstract class Statement {
 		String result = addHeaderString(customer);
 		while (rentals.hasMoreElements()) {
 			Rental each = (Rental) rentals.nextElement();
-			//show figures for each rental
 			result += addEachRentalString(each);
 		}
-		//add footer lines
 		result = addFooterString(customer, result);
 		return result;
 	}
