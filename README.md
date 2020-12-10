@@ -10,6 +10,7 @@ Amount owed is 14.0
 You earned 4 frequent renter points
 ```
 ## 新需求
+
 用户希望以HTML格式输出详单，这样就可以直接在网页进行显示，这非常符合时下的潮流。
 ### example:
 ```
@@ -20,7 +21,8 @@ children movie: 4.5<BR>
 <P>You owe <EM>14.0</EM><P>
 On this rental you earned <EM>4</EM> frequent renter points<P>
 ```
-用户希望改变影片的分类规则，但还没决定怎么改。
+用户希望改变**影片的分类规则**，但还没决定怎么改。不过可以肯定的是改动的方案会影响**顾客消费和常客积分点**的计算方式
 
 ## 要求
-根据新需求的要求对代码进行重构，使其更加符合面向对象精神，并添加HTML格式的输出详单实现。
+
+根据新需求的要求对代码进行重构，使其更加符合面向对象精神，（可选：并添加HTML格式的输出详单实现）。
