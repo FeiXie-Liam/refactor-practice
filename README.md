@@ -11,16 +11,6 @@ You earned 4 frequent renter points
 ```
 ## 新需求
 
-用户希望以HTML格式输出详单，这样就可以直接在网页进行显示，这非常符合时下的潮流。
-### example:
-```
-<H1>Rentals for <EM>user1</EM></H1><P>
-regular movie: 3.5<BR>
-new movie: 6.0<BR>
-children movie: 4.5<BR>
-<P>You owe <EM>14.0</EM><P>
-On this rental you earned <EM>4</EM> frequent renter points<P>
-```
 用户希望改变**影片的分类规则**，但还没决定怎么改。不过可以肯定的是改动的方案会影响**顾客消费和常客积分点**的计算方式
 
 ## 要求
