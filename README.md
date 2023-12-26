@@ -15,4 +15,15 @@ You earned 4 frequent renter points
 
 ## 要求
 
-根据新需求的要求对代码进行重构，使其更加符合面向对象精神，（可选：并添加HTML格式的输出详单实现）。
+根据新需求的要求对代码进行重构，使其更加符合面向对象精神。
+
+### 可选：并添加HTML格式的输出详单实现。
+#### example:
+```
+<H1>Rentals for <EM>user1</EM></H1><P>
+regular movie: 3.5<BR>
+new movie: 6.0<BR>
+children movie: 4.5<BR>
+<P>You owe <EM>14.0</EM><P>
+On this rental you earned <EM>4</EM> frequent renter points<P>
+```
